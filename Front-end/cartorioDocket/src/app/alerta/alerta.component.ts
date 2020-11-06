@@ -8,8 +8,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class AlertaComponent implements OnInit {
 
-  @Input() mensagemAlerta = ''
-  @Input() corAlerta = 'success'
+  @Input() mensagemAlerta: string
+  @Input() corAlerta = ''
 
   constructor(public modal: BsModalRef) { }
 
