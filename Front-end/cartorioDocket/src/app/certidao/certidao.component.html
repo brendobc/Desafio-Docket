@@ -1,0 +1,109 @@
+<div class="parallax-certidao pt-5">
+
+    <div class="row d-flex justify-content-center align-items-center w-100">
+        <div id="textoTitulo" style="border-radius: 10px; background-color: #ffffffe5;">
+            <p class="ml-3 mr-3"
+                style="font-size: 60px; color: #545789a6; -webkit-text-stroke-width: 2px;-webkit-text-stroke-color: #6e6b6b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                <b>Certidões</b>
+            </p>
+        </div>
+    </div>
+
+    <div class="parallax-cartorio w-100">
+        <div class="row d-flex justify-content-center mt-3 mb-3 w-100">
+            <div class="col-md-12 d-flex justify-content-center mt-5 mb-4">
+                <div class="card text-white mb-3" style="width: 30rem; background-color: #542f61;">
+                    <div class="card-body">
+
+                        <div class="row p-3 pt-4">
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <p style="font-size: 28px;"><b>Registrar certidão</b></p>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="nome"><b>Nome:</b></label>
+                                    <input type="text" class="form-control" id="nome"
+                                        placeholder="Digite o nome da certidão" [(ngModel)]='certidaoNome'>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 pr-3">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="nome"><b>Cartório:</b></label>
+                                    <select name="cartorios" id="cartorios" class="form-control"
+                                        [(ngModel)]='idCartorio' (change)='findByIdCartorio()'>
+                                        <option *ngFor='let item of listaCartorios' value={{item.id}}>
+                                            {{item.nome}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btnLogin font-weight-bold"
+                                        (click)='cadastrarCertidao()'>Cadastrar certidão</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <div *ngFor='let item of listaCertidoes'>
+                <div class="card mt-5 mb-5 pl-3 shadow">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row mb-3 d-flex align-items-center">
+                                    <div class="col-md-12 d-flex align-items-center">
+                                        <a class="mt-auto mb-auto mr-2"
+                                            style="font-size: 28px; text-transform: capitalize; color: #542f61;"
+                                            routerLink='/certidao'>
+                                            <b>{{item.nome}}</b>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row mb-2 d-flex align-items-center">
+                                    <div class="col-md-12 d-flex align-items-center">
+                                        <p class="mt-auto mb-auto" style="font-size: 20px; text-transform: capitalize;">
+                                            <b>Cartório emissor:
+                                            </b>{{item.cartorio.nome}}</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-2 d-flex align-items-center">
+                                    <div class="col-md-12 d-flex align-items-center">
+                                        <p class="mt-auto mb-auto" style="font-size: 20px; text-transform: capitalize;">
+                                            <b>Emitido por:
+                                            </b>{{item.usuario.nome}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex justify-content-end align-items-center">
+                                <button class="ml-2 mr-2 btn btnEditar" style="height: 40px;"
+                                    [routerLink]="['/editar-certidao', item.id]">Editar
+                                </button>
+                                <button class="btn btnApagar ml-2" style="height: 40px;"
+                                    [routerLink]="['/apagar-certidao', item.id]">Apagar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

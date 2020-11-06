@@ -1,0 +1,55 @@
+<div class="row d-flex justify-content-center align-items-center pt-5 pb-5 w-100 m-0"
+    style="background-image: url('https://i.imgur.com/VYHHEL7.jpg'); background-repeat: no-repeat; min-height: 700px; max-height: 657px; background-size: cover;">
+    <div class="card text-white mb-5" style="width: 35rem; background-color: #542f61;">
+        <div class="card-body">
+
+            <div class="row animation-icon mb-0 pb-0 pt-0 mt-0">
+                <div class="col-md-12 d-flex justify-content-center m-0 p-0">
+                    <img src="https://i.imgur.com/ewdQ1Ht.png" alt="Logo docket">
+                </div>
+            </div>
+
+            <div class="row pl-3 pr-3 pb-3">
+                <div class="col-md-12">
+                    <h2><b>Login</b></h2>
+                </div>
+            </div>
+
+            <div class="row pl-3 pr-3">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="cpf"><b>CPF:</b></label>
+                        <input type="text" class="form-control" id="cpf" aria-describedby="usuarioHelp"
+                            placeholder="CPF" [(ngModel)]='usuarioCpf'>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pl-3 pr-3">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="senha"><b>Senha:</b></label>
+                        <input type="password" class="form-control" id="senha" placeholder="Senha" [(ngModel)]='usuarioSenha'>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btnLogin font-weight-bold" (click)='entrar()'>Entrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pl-3 pr-3">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <p>Ainda não é cadastrado? <a style="color: #17a2b8" routerLink='/cadastro'>Cadastre-se aqui.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

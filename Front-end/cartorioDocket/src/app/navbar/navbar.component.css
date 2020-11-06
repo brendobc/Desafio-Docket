@@ -1,0 +1,23 @@
+.logoEscrita {
+    content: url(https://i.imgur.com/7GuaMgX.png);
+    width: 160px;
+    alt: "Logo Soul Knight";
+  }
+
+.logoDocket {
+  content: url('https://i.imgur.com/ewdQ1Ht.png');
+  width: 80px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.corBotaoCadastro:hover {
+  background-color: #545789 !important;
+  color: #f3f3f3 !important;
+}
+
+.corBotaoEntrar:hover {
+  background-color: #454872 !important;
+}

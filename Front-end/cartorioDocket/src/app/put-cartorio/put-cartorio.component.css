@@ -1,0 +1,12 @@
+.btnSalvar{
+    color: #3570b2;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 2px solid #3570b2;
+    padding: 5px 40px;
+}
+
+.btnSalvar:hover{
+    color: #f3f3f3;
+    background-color: #3570b2;
+}

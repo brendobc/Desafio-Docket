@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary w-100 m-0" style="background: #eaeae9
+;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand ml-5 mr-4 " routerLink="/home" id="iconeNavBar" style="border-radius: 20px;"></a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <div *ngIf='auth.authLogin()'>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold text-uppercase mr-2" routerLink="/cartorio">Cartórios</a>
+        </li>
+      </div>
+
+      <div *ngIf='auth.authLogin()'>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold text-uppercase mr-2" routerLink="/certidao">Certidões</a>
+        </li>
+      </div>
+    </ul>
+
+    <div *ngIf='!auth.authLogin()' class="">
+      <button class="btn corBotaoEntrar border border-secondary my-2 my-sm-0 mr-3"
+        style="background-color: #545789; color: #f3f3f3;" type="submit" routerLink="/home">Entrar</button>
+    </div>
+
+    <div *ngIf='!auth.authLogin()'>
+      <button class="btn corBotaoCadastro border border-secondary my-2 my-sm-0" style="color: #292b2c
+      ;" type="submit" routerLink="/cadastro">Cadastrar</button>
+    </div>
+
+    <div *ngIf='auth.authLogin()'>
+      <button class="btn corBotaoEntrar my-2 my-sm-0 mr-3" style="background-color: #545789; color: #f3f3f3;"
+        type="submit" (click)='btnSair()'>Sair</button>
+    </div>
+
+  </div>
+</nav>

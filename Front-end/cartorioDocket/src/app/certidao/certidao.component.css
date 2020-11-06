@@ -1,0 +1,47 @@
+.btn{
+    color: #f0f0f0;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 2px solid #f0f0f0;
+    padding: 5px 40px;
+}
+
+.btn:hover{
+    color: #542f61;
+    background-color: #f0f0f0;
+}
+
+.btnEditar{
+    color: #3570b2;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 2px solid #3570b2;
+    padding: 5px 40px;
+}
+
+.btnEditar:hover{
+    color: #f3f3f3;
+    background-color: #3570b2;
+}
+
+.btnApagar{
+    color: #e65562;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 1px solid #e65562;
+    padding: 5px 40px;
+}
+
+.btnApagar:hover{
+    color: #f3f3f3;
+    background-color: #e65562;
+}
+
+.parallax-certidao {
+    background-image: url("https://i.imgur.com/VYHHEL7.jpg");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}

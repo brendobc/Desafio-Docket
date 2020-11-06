@@ -1,0 +1,49 @@
+<div class="container">
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <div class="card mt-5 mb-5 pl-3 shadow">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row mb-3 d-flex align-items-center">
+                                    <div class="col-md-12 d-flex align-items-center">
+                                        <a class="mt-auto mb-auto mr-2"
+                                            style="font-size: 28px; text-transform: capitalize; color: #542f61;"
+                                            routerLink='/certidao'>
+                                            <b>{{certidao.nome}}</b>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row mb-2 d-flex align-items-center">
+                                    <div class="col-md-12 d-flex align-items-center">
+                                        <p class="mt-auto mb-auto" style="font-size: 20px; text-transform: capitalize;">
+                                            <b>Cartório emissor:
+                                            </b>{{certidao.cartorio.nome}}</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-2 d-flex align-items-center">
+                                    <div class="col-md-12 d-flex align-items-center">
+                                        <p class="mt-auto mb-auto" style="font-size: 20px; text-transform: capitalize;">
+                                            <b>Emitido por:
+                                            </b>{{certidao.usuario.nome}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="mt-4 mb-4">
+
+    <h5 class="text-center">Tem certeza que deseja apagar esta certidão?</h5>
+    <div class="d-flex justify-content-center mt-3 mb-5">
+        <button class="btn btnSim mr-3" (click)="btnSim()">Sim</button>
+        <button class="btn btnNao" (click)="btnNao()">Não</button>
+    </div>
+</div>

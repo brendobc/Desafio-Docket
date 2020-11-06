@@ -1,0 +1,32 @@
+.btnEditar{
+    color: #3570b2;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 2px solid #3570b2;
+    padding: 5px 10px;
+}
+
+.btnEditar:hover{
+    color: #f3f3f3;
+    background-color: #3570b2;
+}
+
+.btnApagar{
+    color: #e65562;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 1px solid #e65562;
+    padding: 5px 10px;
+}
+
+.btnApagar:hover{
+    color: #f3f3f3;
+    background-color: #e65562;
+}
+
+.sticker {
+    position: sticky;
+    top: 10px;
+    height: 500px;
+    overflow-y: auto;
+}

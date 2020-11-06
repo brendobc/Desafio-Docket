@@ -1,0 +1,33 @@
+a {
+    cursor: pointer;
+}
+
+.animation-icon{
+    animation-duration: 1.5s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 0%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+.btn{
+    color: #f0f0f0;
+    font-size: 16px;
+    margin: 20px 0;
+    border: 2px solid #f0f0f0;
+    padding: 5px 40px;
+}
+
+.btn:hover{
+    color: #542f61;
+    background-color: #f0f0f0;
+}
